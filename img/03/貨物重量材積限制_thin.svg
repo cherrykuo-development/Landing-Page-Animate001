@@ -1,0 +1,9 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="428.928px" height="388.557px" viewBox="0 0 428.928 388.557" enable-background="new 0 0 428.928 388.557" xml:space="preserve" style="background-color:#000;">
+	<polygon fill="none" stroke="#FFFFFF" stroke-width="4.7371" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="41.499,80.747 246.632,149.409 387.047,86.317 181.86,27.868"/>
+	<polygon fill="none" stroke="#FFFFFF" stroke-width="4.7371" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="39.771,286.573 41.499,80.747 246.632,149.409 246.679,360.689"/>
+	<polygon fill="none" stroke="#FFFFFF" stroke-width="4.7371" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="387.047,86.317 246.632,149.409 246.679,360.689 389.157,285.39"/>
+	<line fill="none" stroke="#FFFFFF" stroke-width="5.9214" stroke-miterlimit="10" x1="121.104" y1="50.754" x2="311.416" y2="120.298"/>
+	<g id="packageLogo" style="transform:translate(60px, 180px);">
+		<image xlink:href="./package-logo.png" src="./package-logo.png" width="162" height="80"/>
+	</g>
+</svg>

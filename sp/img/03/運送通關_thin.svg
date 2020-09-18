@@ -1,0 +1,17 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="310px" height="155.67px" viewBox="0 0 236.083 155.67" enable-background="new 0 0 236.083 155.67" xml:space="preserve">
+	<path id="bigChar_O" class="bigCharOK animateItem" fill="#071549" d="M15.362,100.721c-5.748-30.799,8.165-51.91,33.214-56.585s45.665,10.123,51.389,40.795 c5.725,30.672-8.021,52.68-33.07,57.354S21.086,131.393,15.362,100.721z M80.667,88.533c-3.792-20.319-15.004-30.79-29.063-28.166 C37.547,62.99,30.868,76.8,34.66,97.12c3.769,20.192,15.124,31.431,29.182,28.808C77.899,123.303,84.436,108.725,80.667,88.533z" data-delay="0"/>
+	<path id="bigChar_K" class="bigCharOK animateItem" fill="#071549" d="M103.347,35.765l18.914-3.53l7.657,41.023l0.383-0.071l23.654-46.867l20.831-3.888l-21.941,42.58 l44.704,51.037l-20.831,3.888l-32.329-37.874l-9.438,18.161l4.961,26.582l-18.914,3.53L103.347,35.765z" data-delay="200"/>
+	<path id="exclamationMark" class="bigCharOK animateItem" fill="#071549" d="M190.657,35.208l-3.955-17.645l18.914-3.529l2.677,17.883l6.117,47.658l-12.269,2.289L190.657,35.208z M200.702,104.616c-1.289-6.901,2.693-13.198,9.339-14.438c6.646-1.24,12.76,3.173,14.048,10.074 c1.288,6.9-2.822,13.223-9.468,14.463S201.989,111.516,200.702,104.616z" data-delay="400"/>
+<style>
+path.bigCharOK {opacity:0;}
+path.bigCharOK.active {animation:bounceInLeftUp .5s cubic-bezier(0.215, 0.61, 0.355, 1); opacity:1;}
+@keyframes bounceInLeftUp {
+	0% 		{transform:translate(-30px, -40px) scale(1.2); opacity:0;}
+	40% 	{opacity:1;}
+	70% 	{transform:translate(.5px, 1px);}
+	80% 	{transform:translate(-.5px, -1.5px);}
+	90% 	{transform:translate(.25px, 1px);}
+	100%	{transform:none;}
+}
+</style>
+</svg>

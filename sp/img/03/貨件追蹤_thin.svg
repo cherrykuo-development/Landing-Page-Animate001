@@ -1,0 +1,38 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="214.985px" height="230.168px" viewBox="0 0 214.985 230.168" enable-background="new 0 0 214.985 230.168" xml:space="preserve">
+	<rect id="whitePaper01" class="animateItem" x="28.5" y="24.5" fill="#FFFFFF" stroke="#071549" stroke-width="3" stroke-miterlimit="10" width="164" height="192" data-delay="0"/>
+	<rect id="whitePaper02" class="animateItem" x="19.5" y="15.5" fill="#FFFFFF" stroke="#071549" stroke-width="3" stroke-miterlimit="10" width="164" height="191" data-delay="300"/>
+	<g> <!-- 進度條 -->
+		<rect id="processLine01" class="processLine animateItem" x="38" y="35" fill="#071549" width="42" height="11" data-delay="900"/>
+		<rect id="processLine02" class="processLine animateItem" x="38" y="55" fill="#071549" width="68" height="10" data-delay="1000"/>
+		<rect id="processLine03" class="processLine animateItem" x="38" y="74" fill="#071549" width="80" height="11" data-delay="1100"/>
+		<rect id="processLine04" class="processLine animateItem" x="38" y="94" fill="#071549" width="90" height="11" data-delay="1200"/>
+		<rect id="processLine05" class="processLine animateItem" x="38" y="113" fill="#071549" width="100" height="12" data-delay="1300"/>
+		<rect id="processLine06" class="processLine animateItem" x="38" y="132" fill="#071549" width="106" height="13" data-delay="1400"/>
+		<rect id="processLine07" class="processLine animateItem" x="38" y="152" fill="#071549" width="106" height="12" data-delay="1500"/>
+		<rect id="processLine08" class="processLine animateItem" x="38" y="173" fill="#071549" width="106" height="11" data-delay="1600"/>
+	</g>
+	<g> <!-- 完成欄 -->
+		<rect id="checkbox01" class="checkbox animateItem" x="152" y="33" fill="#071549" width="17" height="15" data-delay="900"/>
+		<rect id="checkbox02" class="checkbox animateItem" x="152" y="52" fill="#071549" width="17" height="16" data-delay="1000"/>
+		<rect id="checkbox03" class="checkbox animateItem" x="152" y="72" fill="#071549" width="17" height="15" data-delay="1100"/>
+		<rect id="checkbox04" class="checkbox animateItem" x="152" y="92" fill="#071549" width="17" height="15" data-delay="1200"/>
+		<rect id="checkbox05" class="checkbox animateItem" x="152" y="112" fill="#071549" width="17" height="15" data-delay="1300"/>
+		<rect id="checkbox06" class="checkbox animateItem" x="152" y="130" fill="#071549" width="17" height="17" data-delay="1400"/>
+		<rect id="checkbox07" class="checkbox animateItem" x="152" y="150" fill="#071549" width="17" height="15" data-delay="1500"/>
+		<rect id="checkbox08" class="checkbox animateItem" x="152" y="171" fill="#071549" width="17" height="15" data-delay="1600"/>
+	</g>
+<style>
+rect#whitePaper01, rect#whitePaper02 {stroke-dashoffset:712; stroke-dasharray:712; opacity:0;}
+rect#whitePaper01.active, rect#whitePaper02.active {stroke-dashoffset:0; opacity:1; transition:stroke-dashoffset .8s cubic-bezier(0.215, 0.61, 0.355, 1), opacity .2s linear;}
+rect.processLine {width:0; opacity:0;}
+rect.processLine.active {opacity:1; transition:width .3s cubic-bezier(0.215, 0.61, 0.355, 1), opacity .2s linear;}
+rect#processLine01.active {width:42px;}
+rect#processLine02.active {width:68px;}
+rect#processLine03.active {width:80px;}
+rect#processLine04.active {width:90px;}
+rect#processLine05.active {width:100px;}
+rect#processLine06.active, rect#processLine07.active, rect#processLine08.active {width:106px;}
+rect.checkbox {opacity:0;}
+rect.checkbox.active {opacity:1; transition:all .3s cubic-bezier(0.215, 0.61, 0.355, 1);}
+</style>
+</svg>
