@@ -1,6 +1,6 @@
 * {box-sizing:border-box; font-family:'微軟正黑體' !important;}
 html, body {min-height:100%; height:auto; overflow-x:hidden;}
-body::after {position:absolute; width:0; height:0; overflow:hidden; z-index:-1; content:url(../img/01/carousel00.png) url(../img/01/carousel01.png) url(../img/01/carousel02.png);}
+body::after {position:absolute; width:0; height:0; overflow:hidden; z-index:-1; content:url(../img/01/carousel00.webp) url(../img/01/carousel01.webp) url(../img/01/carousel02.webp);}
 a {width:100%; height:100%; display:inline-block; text-decoration:none;}
 ul {overflow:hidden;}
 .imgSection {font-size:0; line-height:0;}
@@ -8,7 +8,7 @@ ul {overflow:hidden;}
 .marginBottom80 {margin-bottom:80px;}
 
 
-.pageContainer {width:100%; height:100%; background-color:#071549; background-image:url(../img/bg-star.png);}
+.pageContainer {width:100%; height:100%; background-color:#071549; background-image:url(../img/bg-star.webp);}
 .pageSection {width:100%; height:auto;}
 .pageContent {width:1280px; height:auto; margin:0 auto;}
 /* 星星們 */
@@ -249,7 +249,7 @@ g#packageLogo.active {opacity:1; transition:opacity .8s linear;}
 #pageSection04 .pageContent {padding:80px 100px;}
 #pageSection04 .imgSection {text-align:center;}
 .priceTitle {position:relative;}
-.priceTitle::before {content:url(../img/04/sub_title.png); position:absolute; top:100px; right:280px; opacity:0; transform:scale(0.2);}
+.priceTitle::before {content:url(../img/04/sub_title.webp); position:absolute; top:100px; right:280px; opacity:0; transform:scale(0.2);}
 .priceTitle.active::before {top:5px; right:145px; opacity:1; transform:scale(1); transition:all .45s cubic-bezier(0.215, 0.61, 0.355, 1);}
 
 

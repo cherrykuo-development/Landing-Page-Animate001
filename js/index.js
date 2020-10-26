@@ -12,9 +12,9 @@ $(function() {
 
 				if ( $this[0].id=='mainViewSubTitle' ){
 					setTimeout(function() {
-						$this.attr('src', './img/01/carousel0'+cCount++%3+'.png');
+						$this.attr('src', './img/01/carousel0'+cCount++%3+'.webp');
 						setInterval(function() {
-							$this.attr('src', './img/01/carousel0'+cCount++%3+'.png');
+							$this.attr('src', './img/01/carousel0'+cCount++%3+'.webp');
 						}, 1600);
 					}, 1600);
 				}
