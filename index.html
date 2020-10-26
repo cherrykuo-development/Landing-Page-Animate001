@@ -35,13 +35,9 @@ function pc_mb_change_page() {
 		ua.indexOf("windows phone") !== -1) ? true : false;
 }
 
-// PC / MB 頁面跳轉
-var _redirect;
 if ( pc_mb_change_page() ){
 	window.location.href = './sp/' + window.location.search;
-	_redirect = true;
 }
-if ( _redirect ) return;
 </script>
 
 <!-- Google Analytics -->
