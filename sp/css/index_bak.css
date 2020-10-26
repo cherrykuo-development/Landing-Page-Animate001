@@ -1,6 +1,6 @@
 * {box-sizing:border-box; font-family:'微軟正黑體' !important;}
 html, body {min-height:100%; height:auto; overflow-x:hidden;}
-body::after {position:absolute; width:0; height:0; overflow:hidden; z-index:-1; content:url(../img/01/carousel00.webp) url(../img/01/carousel01.webp) url(../img/01/carousel02.webp);}
+body::after {position:absolute; width:0; height:0; overflow:hidden; z-index:-1; content:url(../img/01/carousel00.png) url(../img/01/carousel01.png) url(../img/01/carousel02.png);}
 img {width:100%; height:auto;}
 a {width:100%; height:100%; display:inline-block; text-decoration:none;}
 ul {overflow:hidden;}
@@ -9,7 +9,7 @@ ul {overflow:hidden;}
 .marginBottom8vh {margin-bottom:8vh;}
 
 
-.pageContainer {width:100%; height:100%; background-color:#071549; background-image:url(../img/bg-star.webp);}
+.pageContainer {width:100%; height:100%; background-color:#071549; background-image:url(../img/bg-star.png);}
 .pageSection {width:100%; height:auto;}
 /* 星星們 */
 svg[id*="Star"] {position:absolute; opacity:0.08;}
