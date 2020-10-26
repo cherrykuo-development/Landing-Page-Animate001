@@ -22,20 +22,6 @@ $(function() {
 		});
 	}
 
-	// 桌機、手機判斷
-	function pc_mb_change_page() {
-		var ua = navigator.userAgent.toLowerCase();
-		if ( ua.indexOf("ipad")          === -1 &&
-				 ua.indexOf("ipod")          === -1 &&
-				 ua.indexOf("iphone")        === -1 &&
-				 ua.indexOf("android")       === -1 &&
-				 ua.indexOf("webos")         === -1 &&
-				 ua.indexOf("blackberry")    === -1 &&
-				 ua.indexOf("windows phone") === -1 
-		){
-			window.location.href = '../' + window.location.search;
-		}
-	}
 
 	// 抓取螢幕寬與高
 	function mbAdjust() {

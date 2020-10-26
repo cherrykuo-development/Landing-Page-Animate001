@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>CherryKuo Demo Page</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- 
@@ -18,11 +17,26 @@
  -->
 	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
 	<link rel="stylesheet" type="text/css" href="./css/reset.css">
-	<link rel="stylesheet" type="text/css" href="./css/index.css?v=201903201141">
-	<script src="./js/jquery.min.js"></script>
-	<script src="./js/index.js?v=201903201039"></script>
+	<link rel="stylesheet" type="text/css" href="./css/index.css?v=202010261015">
+	<title>CherryKuo Demo Page</title>
 </head>
 <body>
+<script>
+// 桌機、手機判斷
+function pc_mb_change_page() {
+	var ua = navigator.userAgent.toLowerCase();
+	if ( ua.indexOf("ipad")          === -1 &&
+			 ua.indexOf("ipod")          === -1 &&
+			 ua.indexOf("iphone")        === -1 &&
+			 ua.indexOf("android")       === -1 &&
+			 ua.indexOf("webos")         === -1 &&
+			 ua.indexOf("blackberry")    === -1 &&
+			 ua.indexOf("windows phone") === -1 
+	){
+		window.location.href = '../' + window.location.search;
+	}
+}
+</script>
 <!-- Google Analytics -->
 <!-- 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89040714-1"></script>
@@ -127,11 +141,9 @@
 			<!-- 主視覺 -->
 			<div class="mainViewSection imgSection">
 				<div class="mainView">
-					<img class="animateItem" id="mainViewTitle" src="./img/01/main-view.png?v=201909261029" data-delay="0">
-					<img class="animateItem" id="mainViewSubTitle" src="./img/01/carousel00.png" data-delay="1100">
+					<img class="animateItem" id="mainViewTitle" src="./img/01/main-view.webp" data-delay="0">
+					<img class="animateItem" id="mainViewSubTitle" src="./img/01/carousel00.webp" data-delay="1100">
 				</div>
-				<!-- <img class="mainViewTitleSection animateItem" src="./img/01/main-view.png?v=201812171655" data-delay="0">
-				<img class="mainViewSubTitleSection animateItem" src="./img/01/promo_percent.png?v=201812171655" data-delay="1250"> -->
 			</div>
 
 		</div>
@@ -456,7 +468,7 @@
 			</ul>
 
 			<div class="imgSection taiwanExampleProduct marginBottom8vh">
-				<img src="./img/03/product-example.png">
+				<img src="./img/03/product-example.webp">
 			</div>
 
 			<div class="packageLimitSection">
@@ -480,7 +492,7 @@
 					</li>
 					<li class="packageLimitItem">
 						<div class="packageLimitImage animateItem" data-delay="250">
-							<img src="./img/03/package-size.png">
+							<img src="./img/03/package-size.webp">
 						</div>
 					</li>
 				</ul>
@@ -493,12 +505,12 @@
 		<div class="pageContent animateGroup">
 			<a href="javascript:;">
 				<div class="imgSection priceTitle animateItem" data-delay="300">
-					<img src="./img/04/title.png">
+					<img src="./img/04/title.webp">
 				</div>
 			</a>
 			<div class="imgSection" style="display:none;">
-				<img src="./img/04/price_table01.png">
-				<img src="./img/04/price_table02.png">
+				<img src="./img/04/price_table01.webp">
+				<img src="./img/04/price_table02.webp">
 			</div>
 		</div>
 	</div>
@@ -508,19 +520,15 @@
 		<div class="pageContent">
 			<div class="startToUseSection imgSection animateGroup">
 				<div class="titleSection titleRightIn animateItem">開始使用UCFuShip</div>
-				<!-- <div class="startToUseTitle">
-					<img src="./img/05/uship_start_use_title.png">
-				</div> -->
-
 				<ul class="startToUseList marginBottom8vh">
 					<li class="startToUseItem">
 						<div class="imgSection animateItem" data-delay="300">
-							<img src="./img/05/uship_introduction_list01.png?v=201812181047">
+							<img src="./img/05/uship_introduction_list01.webp?v=201812181047">
 						</div>
 					</li>
 					<li class="startToUseItem">
 						<div class="imgSection animateItem" data-delay="600">
-							<img src="./img/05/uship_introduction_list02.png?v=201812181047">
+							<img src="./img/05/uship_introduction_list02.webp?v=201812181047">
 						</div>
 					</li>
 				</ul>
@@ -528,27 +536,18 @@
 
 			<div class="videoSection marginBottom8vh animateGroup" style="display:none;">
 				<div class="titleSection titleRightIn animateItem">UCFuShip平台操作教學</div>
-				<!-- <div class="imgSection videoTitle">
-					<img src="./img/05/uship_introduction_title.png">
-				</div> -->
-
 				<div class="youtubeSection animateItem" data-delay="300">
 					<iframe src="https://www.youtube.com/embed/QLOEck_Vkjc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
 			</div>
 
 			<div class="footerLogoSection imgSection">
-				<img class="ushipLogoBottom" src="./img/05/uship-logo.png">
+				<img class="ushipLogoBottom" src="./img/05/uship-logo.webp">
 			</div>
 			<div class="contactSection imgSection">
 				<a href="javascript:;" onclick="fbq('track','Lead'); gtag('event', 'Touch', {'event_category': 'Register-Link', 'event_label': 'Mobile-Vietnam-Solution', 'value': 1 });">
-					<img src="./img/05/register.png">
+					<img src="./img/05/register.webp">
 				</a>
-				<!--
-				<a href="https://www.ucfuship.com/?_ref_url=gdn" target="_target" onclick="gtag('event', 'Touch', {'event_category': 'ContactUs', 'event_label': 'Mobile-Vietnam-Solution', 'value': 1 });">
-					<img src="./img/05/contact-us.png">
-				</a>
-				 -->
 			</div>
 
 			<ul class="linkList">
@@ -737,7 +736,9 @@
 			</ul>
 		</div>
 	</div>
-
 </div>
+
+<script src="./js/jquery.min.js"></script>
+<script src="./js/index.js?v=202010261021"></script>
 </body>
 </html>

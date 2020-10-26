@@ -22,33 +22,12 @@ $(function() {
 		});
 	}
 
-	// 桌機、手機判斷
-	function pc_mb_change_page() {
-		var ua = navigator.userAgent.toLowerCase();
-		return (
-			ua.indexOf("ipad")          !== -1 ||
-			ua.indexOf("ipod")          !== -1 ||
-			ua.indexOf("iphone")        !== -1 ||
-			ua.indexOf("android")       !== -1 ||
-			ua.indexOf("webos")         !== -1 ||
-			ua.indexOf("blackberry")    !== -1 ||
-			ua.indexOf("windows phone") !== -1) ? true : false;
-	}
-
 	// 抓取螢幕高
 	function resizeHeight() {
 		winH = $(window).height();
 	}
 	var winH;
 
-
-	// PC / MB 頁面跳轉
-	var _redirect;
-	if ( pc_mb_change_page() ){
-		window.location.href = './sp/' + window.location.search;
-		_redirect = true;
-	}
-	if ( _redirect ) return;
 
 	// 即時更新螢幕高
 	resizeHeight();
@@ -80,18 +59,4 @@ $(function() {
 			}
 		});
 	});
-
-	// 聯絡我們 button
-	// $(".fancyboxBtn").fancybox({
-	// width 		: 900,
-	// height  	: 490,
-	// fitToView 	: false,
-	// closeClick  : false,
-	// openEffect  : 'none',
-	// closeEffect : 'none',
-	// type 		: 'iframe',
-	// iframe 		: {
-	// 	scrolling : 'auto'
-	// }
-	// });
 });
