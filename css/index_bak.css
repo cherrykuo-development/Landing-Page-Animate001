@@ -1,0 +1,337 @@
+* {box-sizing:border-box; font-family:'微軟正黑體' !important;}
+html, body {min-height:100%; height:auto; overflow-x:hidden;}
+body::after {position:absolute; width:0; height:0; overflow:hidden; z-index:-1; content:url(../img/01/carousel00.webp) url(../img/01/carousel01.webp) url(../img/01/carousel02.webp);}
+a {width:100%; height:100%; display:inline-block; text-decoration:none;}
+ul {overflow:hidden;}
+.imgSection {font-size:0; line-height:0;}
+.marginBottom50 {margin-bottom:50px;}
+.marginBottom80 {margin-bottom:80px;}
+
+
+.pageContainer {width:100%; height:100%; background-color:#071549; background-image:url(../img/bg-star.webp);}
+.pageSection {width:100%; height:auto;}
+.pageContent {width:1280px; height:auto; margin:0 auto;}
+/* 星星們 */
+svg[id*="Star"] {position:absolute; opacity:0.08;}
+svg[id*="Star"].active {animation:starOpacityAnimate 2.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite alternate;}
+svg#whiteStar01_01  {top:27%; left:2%;}
+svg#whiteStar01_02  {top:49%; left:12%; transform:scale(.5); animation-delay:1s;}
+svg#yellowStar01_01 {top:15%; left:27%; animation-delay:2.2s;}
+svg#whiteStar01_03  {top:5%; right:1%; transform:rotateZ(11deg); animation-delay:1s;}
+svg#whiteStar01_04  {top:16%; right:12%; transform:scale(.35) rotateZ(32deg); animation-delay:.2s;}
+svg#whiteStar01_05  {top:52%; right:8%; transform:scale(.3); animation-delay:2s;}
+svg#yellowStar03_01 {top:10%; left:8%;}
+svg#whiteStar03_01  {top:25%; left:0%; transform:scale(.5) rotateZ(37deg); animation-delay:.7s;}
+svg#whiteStar03_02  {top:47%; left:3%; animation-delay:1s;}
+svg#whiteStar03_03  {top:10%; left:58%; transform:scale(.3); animation-delay:.5s;}
+svg#whiteStar03_04  {bottom:48%; left:47%; transform:scale(.2);}
+svg#whiteStar03_05  {top:15%; right:1%; transform:scale(.8); animation-delay:.2s;}
+svg#whiteStar03_06  {top:20%; right:9%; transform:scale(.4); animation-delay:1.2s;}
+svg#whiteStar03_07  {bottom:61%; right:3%; transform:rotateZ(40deg); animation-delay:1.8s;}
+svg#yellowStar03_02 {bottom:53%; right:8%; transform:rotateZ(20deg);}
+svg#whiteStar03_08  {bottom:17%; left:8%; transform:scale(.8);}
+svg#whiteStar03_09  {bottom:4%; right:5%; transform:scale(.2) rotateZ(20deg);}
+svg#yellowStar03_03 {bottom:18%; right:5%; transform:rotateZ(37deg);}
+svg#whiteStar05_01  {bottom:29%; left:8%; transform:scale(.8) rotateZ(16deg);}
+svg#whiteStar05_02  {bottom:13%; left:12%; transform:scale(.3);}
+svg#yellowStar05_01 {bottom:29%; right:13%; transform:scale(.7) rotateZ(23deg);}
+svg#whiteStar05_03  {bottom:16%; right:3%; transform:scale(.3);}
+svg#whiteStar05_04  {bottom:23%; right:6%; transform:scale(.2);}
+svg#whiteStar05_05  {bottom:18%; right:14%; transform:rotateZ(36deg);}
+@keyframes starOpacityAnimate {
+	0%, 10%			    {opacity:.08;}
+	96.5% 			    {opacity:.8;}
+	95%, 98%, 100% 	{opacity:1;}
+}
+.titleLeftIn, .titleRightIn {font-size:36px; font-weight:bold; line-height:50px; letter-spacing:.4em; text-align:center; color:#fff; opacity:0; margin-bottom:50px;}
+.titleLeftIn.active, .titleRightIn.active {opacity:1;}
+.titleLeftIn.active  {animation:lightLeftSpeedIn .8s cubic-bezier(0.215, 0.61, 0.355, 1);}
+.titleRightIn.active {animation:lightRightSpeedIn .8s cubic-bezier(0.215, 0.61, 0.355, 1);}
+@keyframes lightLeftSpeedIn {
+	0% 		{transform:translateX(100%) skewX(-20deg) scale(1.5); opacity:0;}
+	60% 	{transform:skewX(10deg) scale(1); opacity:1;}
+	80% 	{transform:skewX(-5deg);}
+	100% 	{transform:none;}
+}
+@keyframes lightRightSpeedIn {
+	0% 		{transform:translateX(-100%) skewX(20deg) scale(1.3); opacity:0;}
+	60% 	{transform:skewX(-10deg) scale(1); opacity:1;}
+	80% 	{transform:skewX(5deg);}
+	100% 	{transform:none;}
+}
+
+
+/* #pageContainer01 */
+#pageSection01 .fixSection {position:fixed; top:10%; right:0; z-index:100; opacity:0;}
+#pageSection01 .fixSection.active {opacity:1;}
+#pageSection01 .pageContent {min-height:830px; height:100vh; position:relative;}
+/* logo */
+#pageSection01 .logoSection {width:349px; height:127px; padding:20px 0 0 20px; opacity:0; position:absolute; z-index:10;}
+#pageSection01 .logoSection.active {opacity:1;}
+.ushipLogo, .ocsLogo, .ucfLogo {float:left;}
+.ocsLogo, .ucfLogo {margin:1.75px 0;}
+.ushipLogo {margin-right:10px;}
+/* 主視覺 */
+.mainViewSection {width:1080px; height:800px; position:absolute; top:0; right:0; bottom:0; left:0; margin:auto auto;}
+.mainView {position:relative;}
+img#mainViewTitle {opacity:0;}
+img#mainViewTitle.active {opacity:1; animation:zoomInUpMainView 1.3s;}
+img#mainViewSubTitle {position:absolute; top:0; left:0; opacity:0; transform:scale(0.2);}
+img#mainViewSubTitle.active {animation:zoomInAndOut .8s cubic-bezier(0.58, 0.84, 0, 1.18) infinite alternate;}
+@keyframes zoomInUpMainView {
+	0% 		{opacity:0; transform:translateY(180px) scale(.5); animation-timing-function:cubic-bezier(0.550, 0.055, 0.675, 0.190);}
+	40% 	{transform:translateY(-50px) scale(.3); animation-timing-function:cubic-bezier(0.175, 0.885, 0.320, 1);}
+	80% 	{opacity:1; transform:translateY(-30px) scale(1);}
+	86% 	{transform:translateY(15px);}
+	91% 	{transform:translateY(-7.5px);}
+	96.5% 	{transform:translateY(3.75px);}
+	100% 	{transform:translateY(0);}
+}
+@keyframes zoomInAndOut {
+	0% 		{opacity:0; transform:scale(0.85);}
+	100%	{opacity:1; transform:scale(1);}
+}
+/* 標題 */
+#pageSection01 .titleSection {text-align:center; padding-top:100px; position:relative;}
+img#pageTitle {opacity:0;}
+img#pageTitle.active {opacity:1; animation:bounceInUp 1.2s cubic-bezier(0.215, 0.61, 0.355, 1);}
+img#pageSubTitle {position:absolute; top:40%; left:48%; opacity:0; transform:scale(0.2);}
+img#pageSubTitle.active {top:1%; left:65%; opacity:1; transform:scale(1); transition:all .4s cubic-bezier(0.215, 0.61, 0.355, 1);}
+/* 越南箱子 */
+#pageSection01 .boxSection {text-align:center; position:relative;}
+g#vnBoxLine {stroke-dashoffset:660; stroke-dasharray:660; opacity:0;}
+g#vnBoxLine.active {stroke-dashoffset:0; opacity:1; transition:stroke-dashoffset .8s linear, opacity 0s linear;}
+g#vnBoxLight {opacity:0;}
+g#vnBoxLight.active {opacity:1; animation:vnBoxHighLight .1s linear 9 alternate;}
+img#vnlogo {position:absolute; top:50px; left:calc(50% - 122.5px); opacity:0;}
+img#vnlogo.active {opacity:1; animation:zoomInUp 1s;}
+@keyframes bounceInUp {
+	0% 		{transform:translateY(600px); opacity:0;}
+	40% 	{opacity:1;}
+	60% 	{transform:translateY(-20px);}
+	68% 	{transform:translateY(10px);}
+	76% 	{transform:translateY(-5px);}
+	84% 	{transform:translateY(3px);}
+	92% 	{transform:translateY(-2px);}
+	100%	{transform:translateY(0);}
+}
+@keyframes vnBoxHighLight {
+	0%		{opacity:0;}
+	100% 	{opacity:1;}
+}
+@keyframes zoomInUp {
+	0% 		{opacity:0; transform:translateY(100px) scale(.5); animation-timing-function:cubic-bezier(0.550, 0.055, 0.675, 0.190);}
+	50% 	{opacity:1; transform:translateY(-60px) scale(.3); animation-timing-function:cubic-bezier(0.175, 0.885, 0.320, 1);}
+}
+
+
+/* #pageContainer02 */
+#pageSection02 {background-color:#e36562;}
+#pageSection02 .pageContent {padding:80px 100px;}
+li.questionItem {width:300px; float:left; display:inline-block;}
+li#questionItem02 {margin:0 90px;}
+li.questionItem .imgSection {width:100%; height:300px; display:inline-block; background-color:#fff; border-radius:50% 50%; overflow:hidden; margin-bottom:25px; position:relative;}
+li.questionItem .imgSection::before {content:''; width:100%; height:100%; background-color:#fff; border-radius:50% 50%; position:absolute; top:0; left:0; z-index:5; transition:all .4s ease-in-out;}
+li.questionItem .imgSection.active::before {transform:translateY(-100%);}
+li.questionItem .imgSection img {position:absolute; top:0; right:0; bottom:0; left:0; margin:auto auto;}
+li.questionItem .questionTitle {font-size:40px; line-height:40px; font-weight:bold; text-align:center; letter-spacing:.1em; text-indent:.3em; color:#fff; opacity:0;}
+li.questionItem .questionTitle.active {opacity:1; animation:bounceIn .6s cubic-bezier(0.215, 0.61, 0.355, 1);}
+@keyframes bounceIn {
+	0% 		{transform:scale(.3); opacity:0;}
+	20% 	{transform:scale(1.1);}
+	40% 	{transform:scale(.9);}
+	60% 	{transform:scale(1.03); opacity:1;}
+	80% 	{transform:scale(.97);}
+	100% 	{transform:scale(1);}
+}
+
+
+/* #pageContainer03 */
+#pageSection03 .pageContent {padding:80px 0; position:relative;}
+ul.answerList {padding:0 100px;}
+li.answerItem {width:50%; height:auto; display:inline-block; float:left; text-align:center;}
+li.answerItem .imgSection {width:310px; height:310px; display:inline-block; border-radius:50% 50%; background-color:#fff; margin-bottom:20px; transform:rotateY(90deg); position:relative;}
+li.answerItem .imgSection.active {transform:none; transition:all .6s cubic-bezier(0.215, 0.61, 0.355, 1);}
+li.answerItem .imgSection svg {position:absolute; top:0; right:0; bottom:0; left:0; margin:auto auto;}
+li.answerItem .answerTitle, li.answerItem .answerSubTitle {color:#fff;}
+li.answerItem .answerTitle {font-size:40px; font-weight:bold; letter-spacing:.1em; text-indent:.1em; margin-bottom:15px;}
+li.answerItem .answerSubTitle {font-size:20px; line-height:26px; letter-spacing:.1em;}
+/* 運送通關 */
+path.bigCharOK {opacity:0;}
+path.bigCharOK.active {opacity:1; animation:bounceInLeftUp .5s cubic-bezier(0.215, 0.61, 0.355, 1);}
+@keyframes bounceInLeftUp {
+	0% 		{transform:translate(-30px, -40px) scale(1.2); opacity:0;}
+	40% 	{opacity:1;}
+	70% 	{transform:translate(.5px, 1px);}
+	80% 	{transform:translate(-.5px, -1.5px);}
+	90% 	{transform:translate(.25px, 1px);}
+	100%	{transform:none;}
+}
+/* 到府收件 */
+g#drawCarLine {stroke-dashoffset:550; stroke-dasharray:550; opacity:0;}
+g#drawCarLine.active {stroke-dashoffset:0; opacity:1; transition:stroke-dashoffset 1s cubic-bezier(0.215, 0.61, 0.355, 1), opacity 0s linear;}
+g#ocsImgLogoOnCar {fill-opacity:0; transform:translate(-30%, -35%) scale(1.8);}
+g#ocsImgLogoOnCar.active {fill-opacity:1; transform:none; transition:all .3s cubic-bezier(0.215, 0.61, 0.355, 1);}
+g#ocsTextLogoOnCar {fill-opacity:0; transform:translate(-58%, -35%) scale(1.8);}
+g#ocsTextLogoOnCar.active {fill-opacity:1; transform:none; transition:all .3s cubic-bezier(0.215, 0.61, 0.355, 1);}
+line#airplaneLine {stroke-dashoffset:95; stroke-dasharray:95;}
+line#airplaneLine.active {stroke-dashoffset:0; transition:all .8s cubic-bezier(0.215, 0.61, 0.355, 1);}
+path#airplaneImg {fill-opacity:0;}
+path#airplaneImg.active {fill-opacity:1; transition:all .8s cubic-bezier(0.215, 0.61, 0.355, 1);}
+g#tire {transform:translate(0px, 0.5px);}
+g#tire.active {animation:tireAnimate .5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite alternate;}
+g#carSpeedLine {stroke-dashoffset:31; stroke-dasharray:31; opacity:0;}
+g#carSpeedLine.active {opacity:1; animation:carSpeedLineAnimate .5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite alternate;}
+@keyframes tireAnimate {
+	0%, 100% 	{transform:translate(0px, 1px);}
+	25% 		{transform:translate(1px, 1.5px);}
+}
+@keyframes carSpeedLineAnimate {
+	0%, 100% 	{stroke-dashoffset:31; transform:translate(0px, .7px);}
+	45% 		{stroke-dashoffset:2; transform:translate(.5px, .9px);}
+}
+/* 平台優勢 */
+g#monitor {opacity:0;}
+g#monitor.active {opacity:1; transition:all .4s linear;}
+g#ushipLogoLeft {opacity:0; transform:translate(27px, 30px) scale(.6);}
+g#ushipLogoLeft.active {opacity:1; transform:none; transition:all .3s cubic-bezier(0.215, 0.61, 0.355, 1);}
+polygon#triangleRightTop {opacity:0; transform:translateX(30px);}
+polygon#triangleRightTop.active {opacity:1; transform:none; transition:all .3s cubic-bezier(0.215, 0.61, 0.355, 1);}
+g#char_USHIP {opacity:0;}
+g#char_USHIP.active {opacity:1; transition:all .3s cubic-bezier(0.215, 0.61, 0.355, 1);}
+g#ushipLogoRight {transform:translateX(-20px);}
+g#ushipLogoRight.active {transform:none; transition:all .3s cubic-bezier(0.215, 0.61, 0.355, 1);}
+g#arrowBody {opacity:0; transform:translate(10px, 10px);}
+g#arrowBody.active {opacity:1; transform:none; animation:arrowBodyAnimate .4s cubic-bezier(0.215, 0.61, 0.355, 1) 5 alternate;}
+g#arrowLight {opacity:0;}
+g#arrowLight.active {opacity:1; animation:arrowLightAnimate .4s cubic-bezier(0.215, 0.61, 0.355, 1) 5 alternate;}
+@keyframes arrowBodyAnimate {
+	0% 		{opacity:0; transform:translate(6px, 6px);}
+	90% 	{opacity:1;}
+	90% 	{transform:none;}
+}
+@keyframes arrowLightAnimate {
+	0%, 60%	{opacity:0;}
+	100%	{opacity:1;}
+}
+/* 貨件追蹤 */
+rect#whitePaper01, rect#whitePaper02 {stroke-dashoffset:712; stroke-dasharray:712; opacity:0;}
+rect#whitePaper01.active, rect#whitePaper02.active {stroke-dashoffset:0; opacity:1; transition:stroke-dashoffset .8s cubic-bezier(0.215, 0.61, 0.355, 1), opacity .2s linear;}
+rect.processLine {width:0; opacity:0;}
+rect.processLine.active {opacity:1; transition:width .3s cubic-bezier(0.215, 0.61, 0.355, 1), opacity .2s linear;}
+rect#processLine01.active {width:42px;}
+rect#processLine02.active {width:68px;}
+rect#processLine03.active {width:80px;}
+rect#processLine04.active {width:90px;}
+rect#processLine05.active {width:100px;}
+rect#processLine06.active, rect#processLine07.active, rect#processLine08.active {width:106px;}
+rect.checkbox {opacity:0;}
+rect.checkbox.active {opacity:1; transition:all .3s cubic-bezier(0.215, 0.61, 0.355, 1);}
+/* 商品範例 */
+.taiwanExampleProduct {text-align:center;}
+/* 材積限制 */
+.packageLimitTitle {text-align:center;}
+ul.packageLimitList {overflow:hidden;}
+li.packageLimitItem {width:50%; float:left;}
+li.packageLimitItem:first-child {text-align:right;}
+li.packageLimitItem:last-child {text-align:left; padding-top:45px;}
+g#packageLimitSample {stroke-dashoffset:850; stroke-dasharray:850; opacity:0;}
+g#packageLimitSample.active {stroke-dashoffset:0; opacity:1; transition:stroke-dashoffset .8s linear, opacity 0s linear;}
+g#packageLogo {opacity:0;}
+g#packageLogo.active {opacity:1; transition:opacity .8s linear;}
+.packageLimitImage {position:relative;}
+.packageLimitImage::before {content:''; width:355px; height:5px; background-color:rgba(255, 255, 255, .6); position:absolute; bottom:14px; left:32px;}
+.packageLimitImage.active::before {width:0; height:0; left:387px; transition:all .8s cubic-bezier(0.215, 0.61, 0.355, 1);}
+
+
+/* #pageContainer04 */
+#pageSection04 {background-color:#e36562;}
+#pageSection04 .pageContent {padding:80px 100px;}
+#pageSection04 .imgSection {text-align:center;}
+.priceTitle {position:relative;}
+.priceTitle::before {content:url(../img/04/sub_title.webp); position:absolute; top:100px; right:280px; opacity:0; transform:scale(0.2);}
+.priceTitle.active::before {top:5px; right:145px; opacity:1; transform:scale(1); transition:all .45s cubic-bezier(0.215, 0.61, 0.355, 1);}
+
+
+/* #pageContainer05 */
+#pageSection05 .pageContent {padding:80px 0; text-align:center; position:relative;}
+/* 開始使用、教學影片 */
+/*.startToUseTitle, .videoTitle {margin-bottom:30px;}*/
+/*.startToUseTitle {text-align:center;}*/
+ul.startToUseList {width:950px; overflow:hidden; margin:0 auto;}
+li.startToUseItem {transform:rotateY(90deg); opacity:0;}
+li.startToUseItem.active {transform:rotateY(0deg); opacity:1; transition:all .6s cubic-bezier(0.215, 0.61, 0.355, 1);}
+li.startToUseItem:first-child {float:left;}
+li.startToUseItem:last-child {float:right;}
+.videoSection {text-align:center;}
+.youtubeSection {width:950px; height:calc((950px/16)*9); margin:0 auto; position:relative;}
+.youtubeSection::before {content:''; width:calc(100% + 4px); height:calc(100% + 4px); position:absolute; top:-2px; left:-2px; background-color:#071549; z-index:5;}
+.youtubeSection.active::before {height:0; top:0; left:0; transition:all .8s cubic-bezier(0.215, 0.61, 0.355, 1);}
+.youtubeSection iframe {width:100%; height:100%;}
+img.ushipLogoBottom {margin-right:30px;}
+.contactSection {margin-bottom:50px;}
+.serviceTitle, .serviceContent {margin-bottom:30px;}
+.serviceTitle {display:inline-block; position:relative;}
+.serviceTitle::before, .serviceTitle::after {position:absolute;}
+.serviceTitle::before {content:url(../img/05/star01.png); top:12.5px; left:-70px;}
+.serviceTitle::after {content:url(../img/05/star02.png); top:7px; right:-65px;}
+.contactUsBtn {display:inline-block;}
+ul.linkList {width:255px; margin:0 auto;}
+li.linkItem {width:35px; height:35px; display:inline-block; float:left;}
+li.linkItem:not(:last-child) {margin-right:20px;}
+li.linkItem img {width:100%;}
+/* #tikiVNSection 				*/
+#tikiVNSection {background-color:#fff;}
+#tikiVNSection .pageContent {padding:60px 150px;}
+#tikiVNSection li.tikiItem {display:inline-block;}
+#tikiVNSection li.tikiItem:first-child {float:left; margin-top:23px;}
+#tikiVNSection li.tikiItem:last-child {float:right;}
+/* TIKI.VN 越南最大電商平台 */
+g#tikiChar_T {fill-opacity:0;}
+g#tikiChar_T.active {fill-opacity:1; transition:all .15s cubic-bezier(0.215, 0.61, 0.355, 1);}
+g#tikiChar_I01_head {fill-opacity:0; transform:translate(41px, 55px) scale(.41);}
+g#tikiChar_I01_head.active {fill-opacity:1; transform:none; transition:all .15s cubic-bezier(0.215, 0.61, 0.355, 1);}
+g#tikiChar_I01_body {fill-opacity:0; transform:translate(-39px, 0px);}
+g#tikiChar_I01_body.active {fill-opacity:1; transform:none; transition:all .15s cubic-bezier(0.215, 0.61, 0.355, 1);}
+g#tikiChar_K {fill-opacity:0; transform:translate(-39px, 0px);}
+g#tikiChar_K.active {fill-opacity:1; transform:none; transition:all .15s cubic-bezier(0.215, 0.61, 0.355, 1);}
+g#tikiChar_I02_head {fill-opacity:0; transform:translate(95px, 55px) scale(.41);}
+g#tikiChar_I02_head.active {fill-opacity:1; transform:none; transition:all .15s cubic-bezier(0.215, 0.61, 0.355, 1);}
+g#tikiChar_I02_body {fill-opacity:0; transform:translate(-39px, 0px);}
+g#tikiChar_I02_body.active {fill-opacity:1; transform:none; transition:all .15s cubic-bezier(0.215, 0.61, 0.355, 1);}
+g#tikiChar_point {fill-opacity:0; transform:translate(110px, 111px) scale(.4);}
+g#tikiChar_point.active {fill-opacity:1; transform:none; transition:all .15s cubic-bezier(0.215, 0.61, 0.355, 1);}
+g#tikiChar_V {fill-opacity:0; transform:translate(141px, 79px) scale(.4);}
+g#tikiChar_V.active {fill-opacity:1; transform:none; animation:tikiChar_Vanimate .3s cubic-bezier(0.215, 0.61, 0.355, 1);}
+g#tikiChar_N {fill-opacity:0; transform:translate(180px, 79px) scale(.4);}
+g#tikiChar_N.active {fill-opacity:1; transform:none; animation:tikiChar_Nanimate .3s cubic-bezier(0.215, 0.61, 0.355, 1);}
+g.tikiChar_cn {fill-opacity:0; transform:translateY(80px) scale(.4);}
+g.tikiChar_cn.active {fill-opacity:1; transform:none; animation:zoomInDown .35s cubic-bezier(0.55, 0.055, 0.675, 0.19);}
+@keyframes tikiChar_Vanimate {
+	0%, 92.5% 	{fill-opacity:0; transform:translate(141px, 79px) scale(.4);}
+	85%, 100%	{fill-opacity:1; transform:none;}
+	92.5% 		{fill-opacity:0;}
+	100% 		{fill-opacity:1;}
+}
+@keyframes tikiChar_Nanimate {
+	0%, 92.5% 	{fill-opacity:0; transform:translate(180px, 79px) scale(.4);}
+	85%, 100%	{fill-opacity:1; transform:none;}
+	92.5% 		{fill-opacity:0;}
+	100% 		{fill-opacity:1;}
+}
+@keyframes zoomInDown {
+	0% 			{fill-opacity:0; transform:translateY(80px) scale(.4);}
+	30% 		{fill-opacity:1; transform:translateY(60px) scale(.475);}
+	100% 		{transform:translate(0, 0) scale(1);}
+}
+/* 指定物流 */
+rect#distributionBoxBlue {fill:#009CC0; transform:translate(-23px, -19px);}
+rect#distributionBoxBlue.active {fill:#00B4DD; transform:none; transition:all .6s cubic-bezier(0.215, 0.61, 0.355, 1);}
+rect#distributionBoxLine {stroke-dashoffset:1232px; stroke-dasharray:100px; opacity:0;}
+rect#distributionBoxLine.active {stroke-dashoffset:0px; stroke-dasharray:1232px; opacity:1; transition:all .8s cubic-bezier(0.215, 0.61, 0.355, 1);}
+g#distributionCharShadow {fill-opacity:1; transform:translate(8px, 8px);}
+g#distributionCharShadow.active {fill-opacity:0; transform:translate(1px, 1px); transition:all .8s cubic-bezier(0.215, 0.61, 0.355, 1), fill 0s cubic-bezier(0.215, 0.61, 0.355, 1);}
+g#distributionCharShadow path {fill:transparent;}
+g#distributionCharShadow.active path {fill:#00B4DD;}
+g#distributionChar path {fill:#fff;}
+g#distributionChar.active path {fill:#00B4DD; transition:all .8s cubic-bezier(0.215, 0.61, 0.355, 1);}
