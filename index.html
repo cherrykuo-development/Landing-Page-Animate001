@@ -22,6 +22,28 @@
 	<title>CherryKuo Demo Page</title>
 </head>
 <body>
+<script>
+// 桌機、手機判斷
+function pc_mb_change_page() {
+var ua = navigator.userAgent.toLowerCase();
+	return (
+		ua.indexOf("ipad")          !== -1 ||
+		ua.indexOf("ipod")          !== -1 ||
+		ua.indexOf("iphone")        !== -1 ||
+		ua.indexOf("android")       !== -1 ||
+		ua.indexOf("webos")         !== -1 ||
+		ua.indexOf("blackberry")    !== -1 ||
+		ua.indexOf("windows phone") !== -1) ? true : false;
+}
+
+// PC / MB 頁面跳轉
+var _redirect;
+if ( pc_mb_change_page() ){
+	window.location.href = './sp/' + window.location.search;
+	_redirect = true;
+}
+if ( _redirect ) return;
+</script>
 <!-- Google Analytics -->
 <!-- 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89040714-1"></script>
