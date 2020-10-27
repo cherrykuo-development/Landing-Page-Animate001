@@ -285,7 +285,7 @@ li.linkItem:not(:last-child) {margin-right:20px;}
 li.linkItem img {width:100%;}
 /* #tikiVNSection 				*/
 #tikiVNSection {background-color:#fff;}
-#tikiVNSection .pageContent {padding:60px 0;}
+#tikiVNSection .pageContent {padding:60px 8%;}
 #tikiVNSection ul.tikiList {display:grid; grid-template-columns:55% 45%;}
 #tikiVNSection li.tikiItem:first-child {display:flex; justify-content:flex-end; align-items:center;}
 #tikiVNSection li.tikiItem:last-child {display:flex; justify-content:flex-end; align-items:center;}
